@@ -38,6 +38,11 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  http: ^1.1.0        # To send data to Azure Functions
+  camera: ^0.10.5     # To use the phone's camera
+  image_picker: ^1.0.4 # To select/take photos
+  path_provider: ^2.1.1 # To save images temporarily
+  path: ^1.8.3
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
