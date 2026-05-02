@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:university_sports_management/screens/return_screen.dart';
 import 'camera_screen.dart';
 import '../main.dart'; // To access the cameras list
 import '../services/api_service.dart';
@@ -152,6 +153,21 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
             ),
           ],
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 0, // This screen is index 0
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.outbox), label: "Check-out"),
+          BottomNavigationBarItem(icon: Icon(Icons.inbox), label: "Return"),
+        ],
+        onTap: (index) {
+          if (index == 1) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const ReturnScreen()),
+            );
+          }
+        },
       ),
     );
   }
